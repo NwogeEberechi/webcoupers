@@ -1,0 +1,126 @@
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+nav {
+    background-color: #f5f5f5;
+
+    @include desktop {
+        padding-top: 30px;
+        background-color: transparent;
+        line-height: 2
+    }
+    ul {
+
+        li {
+            @include desktop {
+                padding-left: 9px;
+                padding-right: 9px;
+            }
+            a {
+                display: block;
+                padding: .8125em 0;
+                border-bottom: 1px solid #f2f2f2;
+                color: #000 !important;
+                letter-spacing: 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 12px;
+    
+                @include desktop {
+                    color: rgba(241,15,15,1) !important;
+                    border: 0;
+                    display: flex;
+                    padding: 14px 0 0 0;
+                    margin-left: 14px;
+                    position: relative;
+                    line-height: inherit;
+                    align-items: center;
+                    flex: 0 0 auto;
+                    z-index: 2;
+                    font-weight: normal;
+
+                }
+            }
+            a:hover {
+                @include desktop {
+                    color: darken(rgba(241,15,15,1), 80%);
+                    border-bottom: 1px solid green;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    .mobile-header-container {
+        display: flex;
+        width: 100%;
+        margin-top: 8em;
+        margin-bottom: 1.42857em;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        order: 2;
+        padding-left: 30px;
+        padding-right: 25px;
+        color: #000;
+    }
+
+    img {
+        margin-top: 10%;
+        max-height: 40px;
+
+        @include desktop {
+            max-height: 120px;
+        }
+    }
+
+    .brand-logo {
+        left: 10px !important;
+        color: #fff !important;
+        position: absolute;
+        display: inline-block;
+        font-size: 2.1rem;
+        padding: 0;
+
+        @include desktop {
+            left: 0px !important; 
+        }
+    }
+
+    .sidenav-trigger {
+        color: #636363 !important;
+        float: right;
+        position: relative;
+        z-index: 1;
+        margin: 0 18px;
+
+         i {
+            font-size: 36px;
+        }
+    }
+
+    .container {
+        @include desktop {
+            width: 100%;
+        }
+        
+    }
+}
+.dropdown-content{
+    overflow: visible !important;
+}
+
+.sidenav li>a>i.material-icons{
+    margin: 0 0 0 0;
+}
+.dropdown-content > li > a{
+    text-transform: capitalize;
+    color: #636363;
+    font-size: .875em;
+}
+

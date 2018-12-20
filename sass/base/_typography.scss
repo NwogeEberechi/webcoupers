@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+body {
+    font-family: Poppins;
+}
+
+p {
+    font-size: 14px;
+    color: #484848;
+    line-height: 1.964em;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0 0;
+}
+
+h2 {
+    font-size: 33px;
+    font-weight: 900;
+    font-style: normal;
+    font-family:  Poppins;
+}
+
+
+h3 {
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 0.15em;
+}
+
+a:hover {
+    text-decoration: none;
+}

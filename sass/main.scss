@@ -1,0 +1,250 @@
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/form";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/nav";
+
+
+%heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: $heading-color;
+    margin: 1.5em;
+}
+
+%title {
+    text-align: left;
+    color: $title-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+section.header {
+    background: #000;
+
+    div.banner {
+        background-image: url("../images/wolff.jpg") !important;
+        background-position: center;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        min-height: 100vh;
+
+        .description {
+            padding-top: 5em;
+            padding-bottom: 5em;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+
+            .who-we-are {
+                padding-top: 2em; padding-bottom: 2em;
+
+                @include desktop {
+                    width: 70%;
+                    margin: auto;
+                }
+                
+                h3 {
+                    padding: 1em;
+                    font-weight: 600;
+                }
+            }
+
+            .description-items {
+                @include desktop {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                h3 {
+                    padding-top: 1.5em; padding-bottom: 1.5em;
+                    font-weight: 500;
+                    @include desktop {
+                        margin: 2em 8.5em;
+                    }
+                }
+            }
+            
+            h2 {
+                @include desktop {
+                    font-size: 150px;
+                }
+            }
+            
+        }
+
+        
+    }
+}
+
+main {
+    padding: 4em 2em;
+
+    section.services {
+        h2 {
+            @extend %heading;
+        }
+        .services-container {
+            padding-top: 1em; padding-bottom: 1em;
+
+            %services-box {
+                width: 100%;
+                margin-top: 1em; margin-bottom: 0.5em;
+                min-height: 150px;
+                color: #fff;
+                text-align: center;
+                border-radius: 4px;
+                padding-top: 1.5em;
+            }
+            .padding-top{
+                padding-top: 0.4em;
+            }
+            .services-text {
+                p {
+                    text-align: justify
+                }
+            }
+            .strategy{
+
+                .strategy-box{
+                   @extend %services-box;
+                   background-color: green;
+                }
+            }
+            .product-design {
+                .product-design-box {
+                    @extend %services-box;
+                    background-color: gray;
+                }
+            }
+            .technology {
+                .technology-box {
+                    @extend %services-box;
+                    background-color: gold;
+                }
+            }
+            .marketing {
+                .marketing-box {
+                    @extend %services-box;
+                    background-color: orange;
+                }
+            }
+        }
+    }
+
+    section.brand-trust{
+        h2{
+            @extend %heading;
+        }
+        .partners{
+            width: 100%;
+            justify-content: space-between;
+
+            ul {
+                width: 100%;
+                display: inline-block;
+            }
+    
+            li {
+                width: 48%;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    section.mobile-first {
+        @include desktop {
+            margin: 2em 7em;
+        }
+        .mobile {
+            /*
+            width: 50%;
+            margin: auto; */
+
+            h6 {
+                @extend %title;
+                margin-bottom: 1.5em;
+            }
+            h2 {
+                @extend %title;
+                font-weight: normal;
+                margin: 1em 0 1em 0;
+            }
+            p {
+                margin-bottom: 2em;
+
+                a{
+                    background: $title-color;
+                    border-radius: 50em;
+                    letter-spacing: 0.2em;
+                    height: 60px;
+                    margin: auto;
+                    vertical-align: middle;
+                    padding-top: 10px;
+
+                    span {
+                        padding: 2.5em 2.5em;
+                    }
+                }
+            }
+            .mobile-first-img{
+                max-width: 100%;
+                overflow: hidden;
+                @include desktop {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+section.brief {
+    .row{
+        height: 130px;
+        margin: auto;
+        a {
+            width: 100%;
+            background: linear-gradient(137deg,rgb(129, 2, 164) 0%,rgb(232, 66, 39) 100%);
+            
+            height: 100%;
+            vertical-align: middle;
+            text-transform: none;
+            line-height: 130px ;
+            font-size: 25px;
+            font-weight: 400 ;
+            letter-spacing: -0.6px;
+        }
+        a:hover{
+            background: linear-gradient(137deg,rgb(232, 66, 39) 0%,rgb(244, 41, 89) 100%);
+            color: #fff;
+        }
+    }
+    
+}
+
+section.blog {
+    .blog-heading {
+        text-align: center;
+
+        p {
+            @extend %heading;
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-color: #f42958;
+            padding-bottom: 5px;
+            color: #f13c46;
+
+        }
+    }
+}

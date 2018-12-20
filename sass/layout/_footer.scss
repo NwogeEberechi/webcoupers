@@ -1,0 +1,50 @@
+@import "../abstracts/functions";
+
+footer {
+    text-align: center !important;
+    width: 100%;
+    margin: auto;
+    margin-top: 4em;
+    padding-left: 2em; padding-right: 2em;
+
+    @include desktop {
+        width: 40%;
+    }
+
+    h3 {
+            
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 1.7em;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+
+    .row {
+        .col {
+            padding: 0 !important;
+        }
+    }
+
+    .social-media {
+        text-align: center !important;
+
+        .social-media-icon {
+            margin-top: 1.5em;
+            width: 100%;
+            span:nth-child(2) {
+                padding-left: 4em; padding-right: 4em;
+            }
+
+            a{
+                color: #dd3333;
+            }
+            a:hover{
+                color: darken(#dd3333, 30%);
+            }
+
+        }
+        
+    }
+    
+}
